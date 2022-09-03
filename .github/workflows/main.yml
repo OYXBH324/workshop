@@ -35,7 +35,6 @@ jobs:
 
     - name: Image digest
       run: echo ${{ steps.docker_build.outputs.digest }}
-
     - name: Send a Message 
       id: slack
       uses: slackapi/slack-github-action@v1.18.0
