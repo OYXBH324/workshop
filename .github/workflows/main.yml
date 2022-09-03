@@ -37,18 +37,18 @@ jobs:
       id: slack
       uses: slackapi/slack-github-action@v1.18.0
       with:
-        payload: |
+          payload: |
             {
               "blocks": [
                 {
                   "type": "section",
                   "text": {
                     "type": "mrkdwn",
-                    "text": "Name: ${{ secrets.Ning Shen }} \n Matriculation numbers: ${{ secrets.A0265808U }} \n Email: ${{ secrets.e1068716@u.nus.edu }} \n Repo: ${{ github.git://github.com/OYXBH324/workshop.git }} \n Image Name: ${{ secrets.OYXBH }}  \n Image url: ${{ secrets.https://hub.docker.com/repository/docker/oyxbh/cicdtest }}"
+                    "text": "Name: ${{ secrets.SLACK_NAME }} \n Matriculation numbers: ${{ secrets.SLACK_MATRIC }} \n Email: ${{ secrets.SLACK_EMAIL }} \n Repo: ${{ github.repositoryUrl }} \n Image Name: ${{ secrets.IMAGENAME }}  \n Image url: ${{ secrets.IMAGE }}"
                   }
                 }
               ]
             }
       env:
-          SLACK_WEBHOOK_URL: ${{ secrets.https://hooks.slack.com/services/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  }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
           SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
