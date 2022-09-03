@@ -44,7 +44,7 @@ jobs:
                   "type": "section",
                   "text": {
                     "type": "mrkdwn",
-                    "text": "Name: ${{ secrets.Ning Shen }} \n Matriculation numbers: ${{ secrets.A0265808U }} \n Email: ${{ secrets.e1068716@u.nus.edu }} \n Repo: ${{ github.git://github.com/OYXBH324/workshop.git }} \n Image Name: ${{ secrets.OYXBH }}  \n Image url: ${{ secrets.https://hub.docker.com/repository/docker/oyxbh/cicdtest }}"
+                    "text": "Name: ${{ secrets.NingShen }} \n Matriculation numbers: ${{ secrets.A0265808U }} \n Email: ${{ secrets.e1068716@u.nus.edu }} \n Repo: ${{ github.git://github.com/OYXBH324/workshop.git }} \n Image Name: ${{ secrets.OYXBH }}  \n Image url: ${{ secrets.https://hub.docker.com/repository/docker/oyxbh/cicdtest }}"
                   }
                 }
               ]
