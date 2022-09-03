@@ -34,8 +34,7 @@ jobs:
         tags: oyxbh/cicdtest:V1.0
 
     - name: Image digest
-      run: echo ${{ steps.docker_build.outputs.digest }}
-    - name: Send a Message 
+      run: echo ${{ steps.docker_build.outputs.digest }}  - name: Send a Message 
       id: slack
       uses: slackapi/slack-github-action@v1.18.0
       with:
