@@ -36,11 +36,11 @@ jobs:
     - name: Image digest
       run: echo ${{ steps.docker_build.outputs.digest }}
 
-- name: Send a Message 
-        id: slack
-        uses: slackapi/slack-github-action@v1.18.0
-        with:
-          payload: |
+    - name: Send a Message 
+      id: slack
+      uses: slackapi/slack-github-action@v1.18.0
+      with:
+        payload: |
             {
               "blocks": [
                 {
@@ -52,6 +52,6 @@ jobs:
                 }
               ]
             }
-        env:
+      env:
           SLACK_WEBHOOK_URL: ${{ secrets.https://hooks.slack.com/services/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  }}
           SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
